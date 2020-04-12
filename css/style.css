@@ -1,0 +1,59 @@
+body {
+	margin: none;
+	background: url(../img/fire-background.jpg);
+	background-color: rgba(0,0,0,.6);
+	background-blend-mode: overlay;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-family: arial;
+	
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	height: 90vh;
+	max-width: 80vw;
+	margin: auto;
+}
+
+.cover {
+	width: 100%;
+	margin: 2rem auto 2rem;
+}
+
+.press-release {
+	color: #FFFFFF;
+	font-size: 1.5rem;
+	margin: 1rem auto;
+	width: 100%;
+	text-align: center;
+}
+
+.musicplayer {
+	margin: 1rem auto;
+}
+
+.btn-download {
+	font-size: 1.5rem;
+	padding: 1rem 2.5rem;
+	background-color: black;
+	color: white;
+	margin: 2rem auto;
+	border-radius: 30px;
+	border: none;
+}
+
+.btn-download:hover,
+.btn-download:focus {
+	cursor: pointer;
+	background-color: rgb(75,75,75);
+}
+
+.social-icons {
+	display: flex;
+	flex-direction: column;
+	margin: auto auto 0;;
+	justify-self: flex-end;
+}
