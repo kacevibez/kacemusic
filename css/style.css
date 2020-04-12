@@ -13,8 +13,9 @@ body {
 .container {
 	display: flex;
 	flex-direction: column;
+	flex-wrap: no-wrap;
 	height: 90vh;
-	max-width: 80vw;
+	width: 80vw;
 	margin: auto;
 }
 
@@ -23,7 +24,7 @@ body {
 	margin: 2rem auto 2rem;
 }
 
-.press-release {
+.caption {
 	color: #FFFFFF;
 	font-size: 1.5rem;
 	margin: 1rem auto;
@@ -33,9 +34,15 @@ body {
 
 .musicplayer {
 	margin: 1rem auto;
+	width: 100%;
 }
 
-.btn-download {
+.button-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.btn {
 	font-size: 1.5rem;
 	padding: 1rem 2.5rem;
 	background-color: black;
@@ -43,17 +50,79 @@ body {
 	margin: 2rem auto;
 	border-radius: 30px;
 	border: none;
+	text-decoration: none;
 }
 
-.btn-download:hover,
-.btn-download:focus {
+.btn:hover,
+.btn:focus {
 	cursor: pointer;
 	background-color: rgb(75,75,75);
+}
+
+.portrait {
+	order: 1;
+	border-radius: 50%;
+	width: 7rem;
+	margin: auto auto 2rem;
 }
 
 .social-icons {
 	display: flex;
 	flex-direction: column;
-	margin: auto auto 0;;
-	justify-self: flex-end;
+	margin: auto auto 0;
+	align-items: center;
+}
+.social-link-img {
+	height: 3rem;
+}
+
+@media (orientation: landscape) {
+	.container {
+		flex-direction: row;
+		flex-wrap: wrap;
+		max-width: 600px;
+	}
+	.cover {
+		width: 60%;
+		margin: 1rem auto 1rem;
+		order: -2;
+	}
+	.caption {
+		font-size: 1rem;
+		align-self: center;
+		padding: 0 0 0 1rem;
+	}
+	.musicplayer {
+		width: 100%;
+		margin: 0;
+	}
+	.button-container {
+		order: -2;
+		width: 40%;
+		justify-content: center;
+	}
+	.btn {
+		font-size: 1rem;
+		margin: .5rem auto;
+		padding: .75em 1em;
+	}
+	.portrait {
+		display: block;
+		width: 50%;
+		margin: 0 auto 2rem;
+		border-radius: 50%;
+		order: 0;
+	}
+	.social-icons {
+		margin-top: 1.5rem;
+		flex-direction: row;
+	}
+	.social-link-img {
+		height: 1.5rem;
+		margin-left: 1rem;
+	}
+}
+
+@media (orientation: portrait) {
+	
 }
