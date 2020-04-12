@@ -1,16 +1,47 @@
 body {
 	margin: none;
 	background: url(../img/fire-background.jpg);
+	background-size: 100%;
 	background-color: rgba(0,0,0,.6);
 	background-blend-mode: overlay;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	font-family: arial;
-	
+}
+
+#adura {
+	background: url(../img/adura-background.jpg);
+	background-size: 100%;
+	background-color: rgba(0,0,0,.4);
+	background-blend-mode: overlay;
+}
+
+#angela {
+	background: url(../img/angela-background.png);
+	background-size: 100%;
+}
+
+#east {
+	background: url(../img/east-background.jpg);
+	background-size: 100%;
+}
+
+#music {
+	background: url(../img/music-background.jpg);
+	background-size: 100%;
 }
 
 .container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: no-wrap;
+	height: 90vh;
+	width: 80vw;
+	margin: auto;
+}
+
+.container-music {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: no-wrap;
@@ -66,6 +97,30 @@ body {
 	margin: auto auto 2rem;
 }
 
+.portrait-music {
+	border-radius: 50%;
+	width: 30%;
+	margin: auto;
+}
+
+.covers {
+	margin-top: 2rem;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.covers-section {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
+}
+
+.covers-link {
+	width: 40%;
+}
+
 .social-icons {
 	display: flex;
 	flex-direction: column;
@@ -74,6 +129,11 @@ body {
 }
 .social-link-img {
 	height: 3rem;
+}
+
+.kace-name {
+	width: 50%;
+	margin: auto;
 }
 
 @media (orientation: landscape) {
@@ -116,13 +176,10 @@ body {
 	.social-icons {
 		margin-top: 1.5rem;
 		flex-direction: row;
+		margin-bottom: 1rem;
 	}
 	.social-link-img {
 		height: 1.5rem;
 		margin-left: 1rem;
 	}
-}
-
-@media (orientation: portrait) {
-	
 }
