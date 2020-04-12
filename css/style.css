@@ -104,7 +104,7 @@ body {
 }
 
 .covers {
-	margin-top: 2rem;
+	margin: 1.5rem auto;
 	display: flex;
 	flex-direction: column;
 	width: 100%;
@@ -114,11 +114,17 @@ body {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	justify-content: center;
+	justify-content: space-around;
+	margin: .5rem 0;
 }
 
 .covers-link {
 	width: 40%;
+}
+
+.covers-img {
+	width: 100%;
+	border-radius: 15px;
 }
 
 .social-icons {
@@ -134,6 +140,7 @@ body {
 .kace-name {
 	width: 50%;
 	margin: auto;
+	border-radius: 20px;
 }
 
 @media (orientation: landscape) {
@@ -181,5 +188,11 @@ body {
 	.social-link-img {
 		height: 1.5rem;
 		margin-left: 1rem;
+	}
+	.covers {
+		flex-direction: row;
+	}
+	.portrait-music {
+		width: 20%;
 	}
 }
