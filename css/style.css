@@ -195,7 +195,7 @@ body {
 .social-icons {
 	display: flex;
 	flex-direction: column;
-	margin: auto auto 0;
+	margin: auto auto 1rem;
 	align-items: center;
 }
 .social-link-img {
