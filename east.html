@@ -13,10 +13,22 @@
 			<p class="caption">Budding rapper, Kace reaches out to his fans with a new single he titles “East” – one which has him delivering impressively as usual in both Igbo language and English.
 			The new track was mixed and mastered by Berryvick.</p>
 			
-			<audio controls class="musicplayer">
-  				<source src="music/Kace%20-%20East-MM-By-Berryvick.mp3" type="audio/mpeg">
-				Your browser does not support the audio element.
-			</audio>
+			<div class="audioplayer">
+				<audio src="music/Kace%20-%20East-MM-By-Berryvick.mp3" id="song"></audio>
+				<img src="img/icons/play.png" onclick="playPause()" id="play-pause"/>
+				<div class="slider-time-container">
+					<div id="currentTime"></div>
+					<input
+						type="range"
+						id="progress-bar"
+						min="0"
+						max=""
+						value="0"
+						onchange="changeProgressBar()"
+					/>
+					<div id="durationTime"></div>
+				</div>
+			</div>
 			
 			<div class="button-container">
 				<img class="portrait" src="img/kace.jpg" alt="kace"> 
@@ -39,6 +51,6 @@
 			</div>
 		</div>
 		
-		
+		<script src="script/script.js" type="text/javascript"></script>
 	</body>
 </html>

@@ -3,7 +3,7 @@
 	<head>
 		<title>Kace Vibez</title>
 		<link href="css/style.css" rel="stylesheet" type="text/css">
-		<link rel="shortcut icon" href="img/icons/icon.png" type="image/x-icon">
+		<link rel="shortcut icon" href="img/icons/icon.jpg" type="image/x-icon">
 		<script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101247088);</script>
 		<script async src="//static.getclicky.com/js"></script>
 
@@ -15,10 +15,22 @@
 			
 			<p class="caption">In anticipation of his first single of the year, Kace drops the cover to Burna Boy's hit single "Odogwu". Kace who has been consistent with his freestyles warming his way up to the heart of his fans, he drops hot indigenous flows to this instrumental. Listen and vibe to this.</p>
 			
-			<audio controls class="musicplayer">
-  				<source src="music/Kace%20-%20Adura.mp3" type="audio/mpeg">
-				Your browser does not support the audio element.
-			</audio>
+			<div class="audioplayer">
+				<audio src="music/Kace%20-%20Adura.mp3" id="song"></audio>
+				<img src="img/icons/play.png" onclick="playPause()" id="play-pause"/>
+				<div class="slider-time-container">
+					<div id="currentTime">0:00</div>
+					<input
+						type="range"
+						id="progress-bar"
+						min="0"
+						max=""
+						value="0"
+						onchange="changeProgressBar()"
+					/>
+					<div id="durationTime">2:50</div>
+				</div>
+			</div>
 			
 			<div class="button-container">
 				<img class="portrait" src="img/kace.jpg" alt="kace"> 
@@ -41,6 +53,6 @@
 			</div>
 		</div>
 		
-		
+		<script src="script/script.js" type="text/javascript"></script>
 	</body>
 </html>
