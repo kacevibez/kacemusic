@@ -256,7 +256,7 @@ body {
 	}
 	.covers {
 		flex-direction: row;
-		margin: auto;
+		margin: 1.5rem auto;
 		justify-content: center; 
 		flex-wrap: wrap;
 	}
