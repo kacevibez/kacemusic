@@ -1,34 +1,44 @@
 body {
 	margin: none;
-	background: url(../img/fire-background.jpg);
-	background-size: 100%;
-	background-color: rgba(0,0,0,.6);
-	background-blend-mode: overlay;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	font-family: arial;
 }
 
+#beast {
+    background: url(../img/background-beast.jpg);
+	background-size: 100%;
+	background-color: rgba(0,0,0,.6);
+	background-blend-mode: overlay;
+}
+
+#greatness {
+    background: url(../img/background-greatness.jpg);
+    background-size: 100%;
+    background-color: rgba(0,0,0,.4);
+    background-blend-mode: overlay;
+}
+
 #adura {
-	background: url(../img/adura-background.jpg);
+	background: url(../img/background-adura.jpg);
 	background-size: 100%;
 	background-color: rgba(0,0,0,.4);
 	background-blend-mode: overlay;
 }
 
 #angela {
-	background: url(../img/angela-background.png);
+	background: url(../img/background-angela.png);
 	background-size: 100%;
 }
 
 #east {
-	background: url(../img/east-background.jpg);
+	background: url(../img/background-east.jpg);
 	background-size: 100%;
 }
 
 #music {
-	background: url(../img/music-background.jpg);
+	background: url(../img/background-music.jpg);
 	background-size: 100%;
 }
 
@@ -147,6 +157,7 @@ body {
 	border-radius: 30px;
 	border: none;
 	text-decoration: none;
+    text-align: center;
 }
 
 .btn:hover,
@@ -215,7 +226,7 @@ body {
 		max-width: 600px;
 	}
 	.cover {
-		width: 60%;
+		width: 58%;
 		margin: 1rem auto 1rem;
 		order: -2;
 	}
@@ -230,7 +241,7 @@ body {
 	}
 	.button-container {
 		order: -2;
-		width: 40%;
+		width: 38%;
 		justify-content: center;
 	}
 	.btn {
