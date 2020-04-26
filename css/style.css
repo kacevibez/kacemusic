@@ -284,6 +284,11 @@ header {
 	}
 }
 
+.btn-subscribe {
+    margin: auto;
+    background-color: var(--clr-accent);
+}
+
 /* Portfolio */
 
 .portfolio {
