@@ -129,6 +129,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 1em;
+    background-color: var(--clr-accent);
 }
 
 .logo {
@@ -195,7 +196,7 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background: var(--clr-accent);
+    background: var(--clr-dark);
     width: 2em;
     height: 3px;
     border-radius: 1em;
@@ -224,10 +225,12 @@ header {
 
 .nav-open .hamburger {
     transform: rotate(.625turn);
+    color: var(--clr-accent);
 }
 
 .nav-open .hamburger::before {
     transform: rotate(90deg) translateX(-6px);
+    color: var(--clr-accent);
 }
 
 .nav-open .hamburger::after {
