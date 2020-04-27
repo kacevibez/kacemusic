@@ -251,6 +251,20 @@ header {
     text-align: center;
 }
 
+.about-me-btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    flex-direction: column;
+}
+
+.btn-follow {
+    margin: auto;
+    background-color: var(--clr-accent);
+    margin: .25rem auto;
+}
+
 .about-me__img {
 	box-shadow: var(--bs);
 }
@@ -277,6 +291,13 @@ header {
 		padding-left: 1em;
 		padding-right: calc(200px + 4em);
 	}
+    .about-me-btn-container {
+        margin-bottom: 0rem;
+        flex-direction: row;
+    }
+    .btn-follow {
+        margin: .25rem;
+    }
 	.about-me__img {
 		grid-area: img;
 		position: relative;
