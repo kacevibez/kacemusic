@@ -677,14 +677,15 @@ header {
 }
 
 /* Individual music page style */
-
+/*
 .beast-page {background: url(../img/backgrounds/background-beast.jpg);}
 .greatness-page {background: url(../img/backgrounds/background-greatness.jpg);}
 .east-page {background: url(../img/backgrounds/background-east.jpg);}
 .angela-page {background: url(../img/backgrounds/background-angela.png);}
 .adura-page {background: url(../img/backgrounds/background-adura.jpg);}
+*/
 
-
+/*
 .musicpage {
     background-size: 100%;
 	background-color: rgba(0,0,0,.4);
@@ -720,7 +721,7 @@ header {
 .btn-musicpage {
     margin: .5rem auto 0;
 }
-
+*/
 
 /* Audioplayer */
 .audioplayer {
@@ -794,6 +795,7 @@ header {
 }
 
 @media (orientation: landscape) {
+/*
 	.musicpage-container {
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -809,10 +811,12 @@ header {
 		align-self: center;
 		padding: 0 0 0 1rem;
 	}
+*/
 	.musicplayer {
 		width: 100%;
 		margin: 0;
 	}
+/*
 	.musicpage-button-container {
 		order: -2;
 		width: 38%;
@@ -821,6 +825,7 @@ header {
     .btn-musicpage {
         margin: 1.5rem auto 0;
     }
+*/
 }
 
 
