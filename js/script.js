@@ -13,49 +13,6 @@ navLinks.forEach(link => {
     })
 })
 
-// Picture slider 
-const picturePortfolioImages = document.querySelectorAll(".picture-portfolio__img");
-const pictureModal = document.getElementById("picture-modal");
-
-picturePortfolioImages.forEach(function(image, index, src) {
-    image.addEventListener("click", () => {
-        const pictureModalImg = document.getElementById("picture-modal-img");
-        const left = document.getElementById("picture-modal-left");
-        const right = document.getElementById("picture-modal-right");
-        const home = document.getElementById("picture-modal-home");
-        const download = document.getElementById("picture-modal-download");
-        let currentImage = index;
-        
-        pictureModal.classList.add("picture-modal-open");
-        setPicture();
-        
-        function setPicture() {
-            pictureModalImg.src = picturePortfolioImages[currentImage].src;
-            download.href = picturePortfolioImages[currentImage].src;
-        }
-        
-        left.addEventListener("click", () => {
-            currentImage = currentImage - 1;
-            if (currentImage < 0) {
-                currentImage = picturePortfolioImages.length - 1;
-            } 
-            setPicture();
-        });
-        
-        right.addEventListener("click", () => {
-            currentImage = currentImage + 1;
-            if (currentImage > picturePortfolioImages.length - 1) {
-                currentImage = 0;
-            }
-            setPicture();
-        });
-        
-        home.addEventListener("click", () => {
-            pictureModal.classList.remove("picture-modal-open")
-        })  
-    })
-})
-
 // Video modal
 const videoPortfolioImages = document.querySelectorAll(".video-portfolio__img");
 const videoModal = document.getElementById("video-modal");
@@ -69,7 +26,7 @@ videoPortfolioImages.forEach(function(image, index, src) {
         const download = document.getElementById("video-modal-download");
         let currentVideo = index;
         
-        videoModal.classList.add("video-modal-open");
+        videoModal.classList.add("modal-open");
         setVideo();
         
         function setVideo() {
@@ -95,8 +52,53 @@ videoPortfolioImages.forEach(function(image, index, src) {
         });
         
         home.addEventListener("click", () => {
-            videoModal.classList.remove("video-modal-open");
+            videoModal.classList.remove("modal-open");
         })  
     })
 })
+
+
+// Picture slider 
+const picturePortfolioImages = document.querySelectorAll(".picture-portfolio__img");
+const pictureModal = document.getElementById("picture-modal");
+
+picturePortfolioImages.forEach(function(image, index, src) {
+    image.addEventListener("click", () => {
+        const pictureModalImg = document.getElementById("picture-modal-img");
+        const left = document.getElementById("picture-modal-left");
+        const right = document.getElementById("picture-modal-right");
+        const home = document.getElementById("picture-modal-home");
+        const download = document.getElementById("picture-modal-download");
+        let currentImage = index;
+        
+        pictureModal.classList.add("modal-open");
+        setPicture();
+        
+        function setPicture() {
+            pictureModalImg.src = picturePortfolioImages[currentImage].src;
+            download.href = picturePortfolioImages[currentImage].src;
+        }
+        
+        left.addEventListener("click", () => {
+            currentImage = currentImage - 1;
+            if (currentImage < 0) {
+                currentImage = picturePortfolioImages.length - 1;
+            } 
+            setPicture();
+        });
+        
+        right.addEventListener("click", () => {
+            currentImage = currentImage + 1;
+            if (currentImage > picturePortfolioImages.length - 1) {
+                currentImage = 0;
+            }
+            setPicture();
+        });
+        
+        home.addEventListener("click", () => {
+            pictureModal.classList.remove("modal-open")
+        })  
+    })
+})
+
 

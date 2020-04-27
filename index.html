@@ -41,7 +41,7 @@
 		<section id="about">
             <div class="about-me">
                 <h2 class="section__title section__title--about">Kace</h2>
-                <p class="section__subtitle section__subtitle--about">Rapper from Lokoja</p>
+                <p class="section__subtitle section__subtitle--about">Beast from the East</p>
 
                 <div class="about-me__body">
                     <p>Hi guys, its Kace. You're welcome to my web page. Here you'll get to know about me, my music, my background and everything about me. Here you can also download my latest songs, freestyles, pictures and short videos.</p>
@@ -65,8 +65,10 @@
                     <a class="btn btn-follow" href="https://www.youtube.com/channel/UCWvc5tPEP1a4hSb5mfCTWnw"><i class="fab fa-youtube"></i> Kacevibez</a>
                 </div>
 
-                <img class="about-me__img" src="img/pictures/02.jpg" alt="Kace">
-			</div>
+                <img class="about-me__img" src="img/pictures/02.jpg" alt="Jane leaning against a bus">
+                
+                
+            </div>
 		</section>
 		
 		<!-- My music -->
@@ -75,14 +77,14 @@
 			
 			<div class="portfolio music-portfolio">
 				<!-- Portfolio item 01 -->
-				<!-- <a href="greatness.html" class="portfolio__item music-portfolio__item">
+				<a href="greatness.html" class="portfolio__item music-portfolio__item">
                     <img src="img/covers/cover-greatness.jpg" alt="" class="portfolio__img">
-                </a> -->
+                </a>
 				
 				<!-- Portfolio item 02 -->
-				<!-- <a href="beast.html" class="portfolio__item music-portfolio__item">
+				<a href="beast.html" class="portfolio__item music-portfolio__item">
                     <img src="img/covers/cover-beast.jpg" alt="" class="portfolio__img">
-                </a> -->
+                </a>
 				
 				<!-- Portfolio item 03 -->
 				<a href="east.html" class="portfolio__item music-portfolio__item">
@@ -102,6 +104,46 @@
 			</div>
 			
 		</section>
+        
+        <div id="music-modal" class="modal music-modal">
+            <div class="music-modal-container">
+                <div class="music-modal-container">
+                
+                <img class="music-modal-img" src="img/covers/cover-beast.jpg" alt="cover beast from the east">
+                
+                <p class="music-modal-caption">Some text about beast from the east</p>
+                
+                <div class="audioplayer">
+                    <audio src="music/Kace%20-%20Adura.mp3" id="song"></audio>
+                    <img src="img/icons/play.png" onclick="playPause()" id="play-pause"/>
+                    <div class="slider-time-container">
+                        <div id="currentTime"></div>
+                        <input
+                            type="range"
+                            id="progress-bar"
+                            min="0"
+                            max=""
+                            value="0"
+                            onchange="changeProgressBar()"
+                        />
+                        <div id="durationTime"></div>
+                    </div>
+                </div>
+                
+                <div class="music-modal-button-container">
+                    <a class="btn btn-music-modal" href="music/Kace%20-%20Adura.mp3" download><i class="fas fa-download"></i> Download</a>
+
+                    <a class="btn btn-music-modal" href="index.html#music"><i class="fas fa-home"></i> Home</a>
+                </div>
+			
+                
+            </div>
+                
+                
+                
+            </div>
+        </div>
+        
 		
 		<!-- My Videos -->
 		<section class="video" id="videos">
@@ -142,12 +184,12 @@
             </div>
 		</section>
         
-        <div id="video-modal" class="video-modal">
+        <div id="video-modal" class="modal video-modal">
             <div class="video-modal-container">
                 <iframe id="video-modal-vid" src="" allowfullscreen>
                 </iframe>   
                
-                <div class="video-modal-btn-container">
+                <div class="modal-btn-container video-modal-btn-container">
                     <a id="video-modal-left" class="btn video-btn-left modal-btn video-modal-btn"><i class="fas fa-backward"></i></a>
                     <a id="video-modal-download" class="btn video-btn-download modal-btn video-modal-btn" href="" download><i class="fas fa-download"></i></a>
                     <a id="video-modal-home" class="btn video-btn-home modal-btn video-modal-btn" href="#videos"><i class="fas fa-home"></i></a>
@@ -271,14 +313,16 @@
 
 		</section>
         
-        <div id="picture-modal" class="picture-modal">
+        <div id="picture-modal" class="modal picture-modal">
             <div class="picture-modal-container">
                 <img id="picture-modal-img" src="">
                 
-                <a id="picture-modal-left" class="btn picture-btn-left modal-btn picture-modal-btn"><i class="fas fa-backward"></i></a>
-                <a id="picture-modal-download" class="btn picture-btn-download modal-btn picture-modal-btn" href="" download><i class="fas fa-download"></i></a>
-                <a id="picture-modal-home" class="btn picture-btn-home modal-btn picture-modal-btn" href="#pictures"><i class="fas fa-home"></i></a>
-                <a id="picture-modal-right" class="btn picture-btn-right modal-btn picture-modal-btn"><i class="fas fa-forward"></i></a>
+                <div class="modal-btn-container picture-modal-btn-container">
+                    <a id="picture-modal-left" class="btn picture-btn-left modal-btn picture-modal-btn"><i class="fas fa-backward"></i></a>
+                    <a id="picture-modal-download" class="btn picture-btn-download modal-btn picture-modal-btn" href="" download><i class="fas fa-download"></i></a>
+                    <a id="picture-modal-home" class="btn picture-btn-home modal-btn picture-modal-btn" href="#pictures"><i class="fas fa-home"></i></a>
+                    <a id="picture-modal-right" class="btn picture-btn-right modal-btn picture-modal-btn"><i class="fas fa-forward"></i></a>
+                </div>
                 
             </div>
         </div>

@@ -129,7 +129,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 1em;
-    background-color: var(--clr-accent);
+    background: var(--clr-accent);
 }
 
 .logo {
@@ -196,7 +196,7 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background: var(--clr-light);
+    background: var(--clr-dark);
     width: 2em;
     height: 3px;
     border-radius: 1em;
@@ -221,8 +221,9 @@ header {
 
 .nav-open .nav-toggle {
     position: fixed;
+    color: var(--clr-light);
 }
-
+    
 .nav-open .hamburger {
     transform: rotate(.625turn);
 }
@@ -424,74 +425,6 @@ header {
     text-align: center;
 }
 
-/* video modal */
-.video-modal {
-    position: fixed;
-    top: 0; bottom: 0; right: 0; left: 0;
-    width: 100%;
-    height: 100vh;
-    background-image: url(../img/kace.jpg);
-    background-size: 100%;
-    background-color: rgba(0,0,0,.5);
-    background-blend-mode: overlay;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-    transform: translateX(100%);
-    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
-}
-
-.video-modal-open {
-    transform: translateX(0);
-}
-
-.video-modal-container {
-    width: 90vw;
-    height: 60vw;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-@media (orientation: landscape) {
-    .video-modal-container {
-        width: 60vw;
-        height: 40vw;
-        max-width: 650px;
-    }
-}
-
-#video-modal-vid {
-    width: 100%;
-    height: 100%;
-}
-
-.video-modal-btn-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.modal-btn {
-    font-size: var(--fs-h3);
-    padding: .5em;
-}
-
-.video-modal-btn {
-    width: 25%;
-    text-align: center;
-    border: 2px solid white;
-}
-
-/*
-.btn-right {right: 0; bottom: 0;}
-.btn-left {left: 0; bottom: 0;}
-.btn-download {top: 0; left: 0;}
-.btn-home {top: 0; right: 0;}
-*/
-
 /* My Pictures section */
 
 .my-pictures {
@@ -544,13 +477,10 @@ header {
     }
 }
 
-.picture-modal {
+/* Modals */
+.modal {
     position: fixed;
     top: 0; bottom: 0; right: 0; left: 0;
-    background-image: url(../img/backgrounds/background-beast.jpg);
-    background-size: 100%;
-    background-color: rgba(0,0,0,.4);
-    background-blend-mode: overlay;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -559,8 +489,127 @@ header {
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
 }
 
-.picture-modal-open {
+.modal-open {
     transform: translateX(0);
+}
+
+.modal-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-btn {
+    font-size: var(--fs-h3);
+    padding: .5em;
+    width: 25%;
+    text-align: center;
+    border: 2px solid white;
+}
+
+/* music modal */
+.music-modal {
+    background-image: url(../img/backgrounds/background-beast.jpg);
+    background-size: 100%;
+    background-color: rgba(0,0,0,.5);
+    background-blend-mode: overlay;
+}
+
+.music-modal-container {
+    display: flex;
+	flex-direction: column;
+	flex-wrap: no-wrap;
+	width: 80vw;
+	margin: auto;
+    
+}
+
+.music-modal-img {
+    width: 60%;
+    align-self: center;
+}
+
+.music-modal-caption {
+    color: var(--clr-light);
+    margin: 1rem auto;
+	width: 100%;
+	text-align: center;
+}
+
+.music-modal-button-container {
+    display: flex;
+	flex-direction: row;
+}
+
+.btn-music-modal {
+    margin: .5rem auto 0;
+}
+
+@media (orientation: landscape) {
+	.music-modal-container {
+		flex-direction: row;
+		flex-wrap: wrap;
+		max-width: 600px;
+	}
+	.music-modal-img {
+		width: 58%;
+		margin: 1rem auto 1rem;
+		order: -2;
+	}
+	.music-modal-caption {
+		font-size: 1rem;
+		align-self: center;
+		padding: 0 0 0 1rem;
+	}
+	.music-modal-button-container {
+		order: -2;
+		width: 38%;
+		justify-content: center;
+        flex-direction: column;
+	}
+    .btn-music-modal {
+        margin: 1.5rem auto 0;
+    }
+}
+
+/* video modal */
+
+.video-modal {
+    background-image: url(../img/kace.jpg);
+    background-size: 100%;
+    background-color: rgba(0,0,0,.5);
+    background-blend-mode: overlay;
+}
+
+.video-modal-container {
+    width: 90vw;
+    height: 60vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (orientation: landscape) {
+    .video-modal-container {
+        width: 60vw;
+        height: 40vw;
+        max-width: 650px;
+    }
+}
+
+#video-modal-vid {
+    width: 100%;
+    height: 100%;
+}
+
+/* picture modal */
+
+.picture-modal {
+    background-image: url(../img/backgrounds/background-beast.jpg);
+    background-size: 100%;
+    background-color: rgba(0,0,0,.5);
+    background-blend-mode: overlay;
 }
 
 .picture-modal-container {
@@ -573,14 +622,11 @@ header {
     width: 100%;
 }
 
-.picture-modal-btn {
+.picture-modal-btn-container {
     position: absolute;
+    bottom: -20px;
+    left: 0px; right: 0px;
 }
-
-.picture-btn-right {right: 0; bottom: 0;}
-.picture-btn-left {left: 0; bottom: 0;}
-.picture-btn-download {top: 0; left: 0;}
-.picture-btn-home {top: 0; right: 0;}
 
 /* Footer */
 
@@ -631,12 +677,15 @@ header {
 }
 
 /* Individual music page style */
+/*
 .beast-page {background: url(../img/backgrounds/background-beast.jpg);}
 .greatness-page {background: url(../img/backgrounds/background-greatness.jpg);}
 .east-page {background: url(../img/backgrounds/background-east.jpg);}
 .angela-page {background: url(../img/backgrounds/background-angela.png);}
 .adura-page {background: url(../img/backgrounds/background-adura.jpg);}
+*/
 
+/*
 .musicpage {
     background-size: 100%;
 	background-color: rgba(0,0,0,.4);
@@ -672,6 +721,7 @@ header {
 .btn-musicpage {
     margin: .5rem auto 0;
 }
+*/
 
 /* Audioplayer */
 .audioplayer {
@@ -745,6 +795,7 @@ header {
 }
 
 @media (orientation: landscape) {
+/*
 	.musicpage-container {
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -760,10 +811,12 @@ header {
 		align-self: center;
 		padding: 0 0 0 1rem;
 	}
+*/
 	.musicplayer {
 		width: 100%;
 		margin: 0;
 	}
+/*
 	.musicpage-button-container {
 		order: -2;
 		width: 38%;
@@ -772,6 +825,7 @@ header {
     .btn-musicpage {
         margin: 1.5rem auto 0;
     }
+*/
 }
 
 
