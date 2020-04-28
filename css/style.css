@@ -670,49 +670,6 @@ header {
     font-size: var(--fs-body);
 }
 
-/* Individual music page style */
-.beast-page {background: url(../img/backgrounds/background-beast.jpg);}
-.greatness-page {background: url(../img/backgrounds/background-greatness.jpg);}
-.east-page {background: url(../img/backgrounds/background-east.jpg);}
-.angela-page {background: url(../img/backgrounds/background-angela.png);}
-.adura-page {background: url(../img/backgrounds/background-adura.jpg);}
-
-.musicpage {
-    background-size: 100%;
-	background-color: rgba(0,0,0,.4);
-	background-blend-mode: overlay;
-    background-attachment: fixed;
-}
-
-.musicpage-container {
-    display: flex;
-	flex-direction: column;
-	flex-wrap: no-wrap;
-	width: 80vw;
-	margin: auto;
-    padding: 2rem 0;
-}
-
-.musicpage-img {
-    width: 100%;
-}
-
-.musicpage-caption {
-    color: var(--clr-light);
-    margin: 1rem auto;
-	width: 100%;
-	text-align: center;
-}
-
-.musicpage-button-container {
-    display: flex;
-	flex-direction: column;
-}
-
-.btn-musicpage {
-    margin: .5rem auto 0;
-}
-
 /* Audioplayer */
 .audioplayer {
 	width: 95%;
@@ -726,7 +683,8 @@ header {
 
 #play-pause {
 	height: 1.5rem;
-	padding: .5rem;
+    width: 1.5rem;
+    margin: .5rem;
 }
 
 #play-pause:hover,
