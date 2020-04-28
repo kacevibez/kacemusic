@@ -14,11 +14,11 @@ navLinks.forEach(link => {
 })
 
 // Video modal
-const videoPortfolioImages = document.querySelectorAll(".video-portfolio__img");
+const videoPortfolioItems = document.querySelectorAll(".video-portfolio__item");
 const videoModal = document.getElementById("video-modal");
 
-videoPortfolioImages.forEach(function(image, index, src) {
-    image.addEventListener("click", () => {
+videoPortfolioItems.forEach(function(item, index, src) {
+    item.addEventListener("click", () => {
         const videoModalVid = document.getElementById("video-modal-vid");
         const left = document.getElementById("video-modal-left");
         const right = document.getElementById("video-modal-right");
@@ -30,22 +30,22 @@ videoPortfolioImages.forEach(function(image, index, src) {
         setVideo();
         
         function setVideo() {
-            videoSource = videoPortfolioImages[currentVideo].dataset.source;
+            videoSource = videoPortfolioItems[currentVideo].children[0].dataset.source;
             videoModalVid.src = videoSource;
-            download.href = videoPortfolioImages[currentVideo].dataset.file;
+            download.href = videoPortfolioItems[currentVideo].children[0].dataset.file;
         }
         
         left.addEventListener("click", () => {
             currentVideo = currentVideo - 1;
             if (currentVideo < 0) {
-                currentVideo = videoPortfolioImages.length - 1;
+                currentVideo = videoPortfolioItems.length - 1;
             } 
             setVideo();
         });
         
         right.addEventListener("click", () => {
             currentVideo = currentVideo + 1;
-            if (currentVideo > videoPortfolioImages.length - 1) {
+            if (currentVideo > videoPortfolioItems.length - 1) {
                 currentVideo = 0;
             }
             setVideo();
