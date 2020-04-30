@@ -35,7 +35,9 @@ musicPortfolioItems.forEach(function(item, index, src) {
         
         home.addEventListener("click", () => {
             musicModal.classList.remove("modal-open");
-            audioPlayer.src = "";
+            song.pause();
+            pPause.src = "img/icons/play.png"
+            playing = true;
         })  
            
     })
