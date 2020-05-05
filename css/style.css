@@ -19,7 +19,9 @@
 	
 	--fs-h1: 3rem;
 	--fs-h2: 2.25rem;
-	--fs-h3: 1.25rem;
+	--fs-h3: 1.75rem;
+    --fs-h4: 1rem;
+    
 	--fs-body: 1rem;
 	
 	--bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25), 
@@ -30,7 +32,8 @@
 	:root { 
 		--fs-h1: 4.5rem;
 		--fs-h2: 3.75rem;
-		--fs-h3: 1.5;
+		--fs-h3: 2.25rem;
+        --fs-h4: 1.2rem;
 		--fs-body: 1.125rem;
 	}
 }
@@ -294,6 +297,14 @@ header {
 		padding-left: 1em;
 		padding-right: calc(200px + 4em);
 	}
+	.about-me__img {
+		grid-area: img;
+		position: relative;
+		z-index: 2;	
+	}
+}
+
+@media (min-width: 789px) {
     .about-me-btn-container {
         margin-bottom: 0rem;
         flex-direction: row;
@@ -301,12 +312,8 @@ header {
     .btn-follow {
         margin: .25rem;
     }
-	.about-me__img {
-		grid-area: img;
-		position: relative;
-		z-index: 2;	
-	}
 }
+
 
 /* Portfolio */
 
@@ -373,13 +380,10 @@ header {
 	background: var(--clr-accent);
 }
 
-.portfolio-download-icon {
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: var(--clr-accent);
-    padding: .5em;
-    font-size: var(--fs-h3)
+.section__subtitle--music {
+    color: var(--clr-light);
+    margin: 4rem 0;
+    
 }
 
 /* Videos section */
@@ -494,7 +498,7 @@ header {
 }
 
 .modal-btn {
-    font-size: var(--fs-h3);
+    font-size: var(--fs-h4);
     padding: .5em;
     width: 25%;
     text-align: center;
@@ -505,7 +509,7 @@ header {
 .music-modal {
     background-image: url(../img/backgrounds/background-beast.jpg);
     background-size: 100%;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0,0,0,.6);
     background-blend-mode: overlay;
 }
 
@@ -521,6 +525,7 @@ header {
 .music-modal-img {
     width: 60%;
     align-self: center;
+    border: 3px solid var(--clr-light);
 }
 
 .music-modal-caption {
@@ -622,6 +627,23 @@ header {
     left: 0px; right: 0px;
 }
 
+/* Facebook */
+.facebook {
+    background-color: rgba(0,0,0,.5);
+	background-image: url(../img/kace.jpg);
+    background-blend-mode: overlay;
+	background-size: cover;
+	background-position: top center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+.facebook-post {
+    margin-bottom: 1rem;
+    opacity: .7;
+}
+
 /* Footer */
 
 .footer {
@@ -630,6 +652,9 @@ header {
 	text-align: center;
 	padding: 2.5em 0;
 	font-size: var(--fs-h3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer a { 
