@@ -695,6 +695,12 @@ header {
     font-size: var(--fs-body);
 }
 
+@media (min-width: 540px) {
+    .social-list-div {
+        display: flex;
+    }
+}
+
 /* Audioplayer */
 .audioplayer {
 	width: 95%;
