@@ -275,6 +275,16 @@ header {
 	box-shadow: var(--bs);
 }
 
+.btn-audiomack {
+    display: flex;
+}
+
+.audiomack-icon {
+    height: 1rem;
+    display: inline-block;
+    margin-right: 5px;
+}
+
 @media (min-width: 600px) {
 	.about-me {
 		display: grid;
@@ -308,6 +318,8 @@ header {
     .about-me-btn-container {
         margin-bottom: 0rem;
         flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
     }
     .btn-follow {
         margin: .25rem;
@@ -627,23 +639,6 @@ header {
     left: 0px; right: 0px;
 }
 
-/* Facebook */
-.facebook {
-    background-color: rgba(0,0,0,.5);
-	background-image: url(../img/kace.jpg);
-    background-blend-mode: overlay;
-	background-size: cover;
-	background-position: top center;
-    background-attachment: fixed;
-    display: flex;
-    justify-content: center;
-}
-
-.facebook-post {
-    margin-bottom: 1rem;
-    opacity: .7;
-}
-
 /* Footer */
 
 .footer {
@@ -691,9 +686,15 @@ header {
     padding: 0 .5em;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-weight: var(--fw-bold);
     font-size: var(--fs-body);
 }
+
+.audiomack-icon-footer {
+    height: 1em;
+    margin: .3em
 
 @media (min-width: 540px) {
     .social-list-div {
