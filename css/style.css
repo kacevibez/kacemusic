@@ -276,11 +276,21 @@ header {
 
 .btn-audiomack {
     display: flex;
+    align-items: center;
 }
+/*
 .audiomack-icon {
     height: 1rem;
     display: inline-block;
     margin-right: 5px;
+    color: white;
+}
+*/
+
+svg {
+    height: 1em;
+    margin-right: .5rem;
+    width: auto; 
 }
 
 @media (min-width: 600px) {
@@ -675,6 +685,11 @@ header {
 	padding: 0;
 }
 
+.social-list-div {
+    display: flex;
+    flex-direction: column;
+}
+
 .social-list__item {
 	margin: 0 .5em;
 }
@@ -684,17 +699,25 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     font-weight: var(--fw-bold);
     font-size: var(--fs-body);
 }
 
+.footer-audiomack-icon-span {
+    display: flex;
+    justify-content: center;
+    height: 25.33px;
+}
+
 .audiomack-icon-footer {
     height: 1em;
+    margin: auto;
 }
 
 @media (min-width: 540px) {
     .social-list-div {
-        display: flex;
+        flex-direction: row;
     }
 }
 
