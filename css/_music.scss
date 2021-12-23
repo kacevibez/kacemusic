@@ -1,0 +1,31 @@
+/* My music section */
+
+.my-music {
+    position: relative;
+    background-color: rgba(0,0,0,.5);
+	background-image: url(../img/backgrounds/background-beast.jpg);
+    background-blend-mode: overlay;
+	background-size: cover;
+	background-position: top center;
+    background-attachment: fixed;
+	text-align: center;
+}
+
+.section__title--music {
+    color: var(--clr-light);
+}
+
+.section__title--music::after {
+    content: '';
+	display: block;
+	width: 2em;
+	height: 4px;
+	margin: 0.5em auto 1em;
+	background: var(--clr-accent);
+}
+
+.section__subtitle--music {
+    color: var(--clr-light);
+    margin: 4rem 0;
+    
+}

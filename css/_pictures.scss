@@ -1,0 +1,51 @@
+/* My Pictures section */
+
+.my-pictures {
+	background-color: rgba(0,0,0,.5);
+	background-image: url(../img/backgrounds/background-beast.jpg);
+    background-blend-mode: overlay;
+	background-size: cover;
+    background-attachment: fixed;
+	color: var(--clr-light);
+	text-align: center;
+}
+
+.section__title--pictures {
+	color: var(--clr-light);
+	position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 2em;
+        height: 4px;
+        margin: 0.5em auto 1em;
+        background: var(--clr-accent);
+    }
+}
+
+.picture-portfolio {
+    display:flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    justify-content: center;
+
+    &__item {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 680px) {
+    .picture-portfolio__item {
+        width: 230px;
+        height: 230px;
+    }
+}
+
+@media (max-width: 540px) {
+    .picture-portfolio__item {
+        width: 175px;
+        height: 175px;
+    }
+}

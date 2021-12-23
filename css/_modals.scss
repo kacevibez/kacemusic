@@ -1,0 +1,159 @@
+/* Modals */
+.modal {
+    position: fixed;
+    top: 0; bottom: 0; right: 0; left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+
+    &-open {
+        transform: translateX(0);
+    }
+
+    &-btn {
+        font-size: var(--fs-h4);
+        padding: .5em;
+        width: 25%;
+        text-align: center;
+        border: 2px solid white;
+
+        &-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+
+/* music modal */
+.music-modal {
+    background-image: url(../img/backgrounds/background-beast.jpg);
+    background-size: 100%;
+    background-color: rgba(0,0,0,.6);
+    background-blend-mode: overlay;
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: no-wrap;
+        width: 80vw;
+        margin: auto;
+    }
+
+    &-img {
+        width: 60%;
+        align-self: center;
+        border: 3px solid var(--clr-light);
+    }
+
+    &-caption {
+        color: var(--clr-light);
+        margin: 1rem auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    &-button-container {
+        display: flex;
+	    flex-direction: row;
+    }
+}
+
+.btn-music-modal {
+    margin: .5rem auto 0;
+    width: 168px;
+    text-align: center;
+}
+
+@media (orientation: landscape) {
+	.music-modal {
+        &-container {
+            flex-direction: row;
+            flex-wrap: wrap;
+            max-width: 600px;
+        }
+
+        &-img {
+            width: 58%;
+            margin: 1rem auto 1rem;
+            order: -2;
+        }
+
+        &-caption {
+            font-size: 1rem;
+            align-self: center;
+            padding: 0 0 0 1rem;
+        }
+
+        &-button-container {
+            order: -2;
+            width: 38%;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+    
+    .btn-music-modal {
+        margin: 1.5rem auto 0;
+    }
+}
+
+/* video modal */
+
+.video-modal {
+    background-image: url(../img/kace.jpg);
+    background-size: 100%;
+    background-color: rgba(0,0,0,.5);
+    background-blend-mode: overlay;
+
+    &-container {
+        width: 90vw;
+        height: 60vw;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (orientation: landscape) {
+    .video-modal-container {
+        width: 60vw;
+        height: 40vw;
+        max-width: 650px;
+    }
+}
+
+#video-modal-vid {
+    width: 100%;
+    height: 100%;
+}
+
+/* picture modal */
+
+.picture-modal {
+    background-image: url(../img/backgrounds/background-beast.jpg);
+    background-size: 100%;
+    background-color: rgba(0,0,0,.5);
+    background-blend-mode: overlay;
+
+    &-container {
+        max-width: 55vh;
+        margin: 2rem;
+        position: relative;
+    }
+
+    &-btn-container {
+        position: absolute;
+        bottom: -20px;
+        left: 0px; right: 0px;
+    }
+}
+
+#picture-modal-img {
+    width: 100%;
+}

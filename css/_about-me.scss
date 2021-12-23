@@ -1,0 +1,98 @@
+/* About me section */
+#about {
+    background-color: rgba(0,0,0,.5);
+	background-image: url(../img/kace.jpg);
+    background-blend-mode: overlay;
+	background-size: cover;
+	background-position: top center;
+    background-attachment: fixed;
+}
+
+.about-me {
+	max-width: 1000px;
+	margin: auto;
+    color: var(--clr-light);
+    text-align: center;
+
+    &-btn-container {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 1rem;
+        flex-direction: column;
+    }
+
+    &__img {
+        box-shadow: var(--bs);
+    }
+}
+
+.btn-follow {
+    margin: auto;
+    background-color: var(--clr-accent);
+    margin: .25rem auto;
+    width: 186px;
+}
+
+.btn-audiomack {
+    display: flex;
+    align-items: center;
+}
+/*
+.audiomack-icon {
+    height: 1rem;
+    display: inline-block;
+    margin-right: 5px;
+    color: white;
+}
+*/
+
+svg {
+    height: 1em;
+    margin-right: .5rem;
+    width: auto; 
+}
+
+@media (min-width: 600px) {
+	.about-me {
+		display: grid;
+		grid-template-columns: 1fr 200px;
+		grid-template-areas: 
+			"title img"
+			"subtitle img"
+			"text img";
+		grid-column-gap: 2em; 
+
+        &__img {
+            grid-area: img;
+            position: relative;
+            z-index: 2;	
+        }
+	}
+
+	.section__title--about {
+		grid-area: title;
+	}
+
+	.section__subtitle--about {
+		grid-column: 1/-1;
+		grid-row: 2;
+		position: relative;
+		left: -1em;
+		width: calc(100% + 2em);
+		padding-left: 1em;
+		padding-right: calc(200px + 4em);
+	}
+}
+
+@media (min-width: 789px) {
+    .about-me-btn-container {
+        margin-bottom: 0rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    
+    .btn-follow {
+        margin: .25rem;
+    }
+}

@@ -1,0 +1,40 @@
+/* Videos section */
+
+.video {
+	position: relative;
+    background-color: rgba(0,0,0,.5);
+	background-image: url(../img/kace.jpg);
+    background-blend-mode: overlay;
+	background-size: cover;
+	background-position: top center;
+    background-attachment: fixed;
+}
+
+.section__title--video {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--clr-light);
+}
+
+.section__title--video::after {
+    content: '';
+	display: block;
+	width: 2em;
+	height: 4px;
+	margin: 0.5em auto 1em;
+	background: var(--clr-accent);
+}
+
+.video-portfolio-overlay {
+    position: absolute;
+    color: var(--clr-accent);
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-bold);
+    bottom: 1rem;
+    width: 100%;
+    text-align: center;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
